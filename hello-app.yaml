@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+spec:
+  containers:
+  - image: hela:8443/hello-k8s:v1
+    name: hello-app
+    ports:
+    - containerPort: 8080
+      hostPort: 9090
+      protocol: TCP
